@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>What's new in GlowTracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg1:#f7e9f3; --bg2:#e8e6fb; --bg3:#fdeee6;
+    --ink:#4a3f54; --ink-soft:#7a6c84;
+    --blush:#e98aa6; --blush-deep:#d96d8e;
+    --lav:#a78fd6; --mint:#7fc6ad; --peach:#f0a06b;
+    --card:#ffffff;
+    --rounded:'Baloo 2','Quicksand',system-ui,sans-serif;
+    --body:'Quicksand',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{min-height:100%;}
+  body{
+    font-family:var(--body);color:var(--ink);
+    background:linear-gradient(135deg,var(--bg1),var(--bg2) 55%,var(--bg3));
+    background-attachment:fixed;
+    padding:48px 20px 80px;-webkit-font-smoothing:antialiased;
+    line-height:1.55;
+  }
+  main{max-width:680px;margin:0 auto;}
+  header{text-align:center;margin-bottom:36px;}
+  header h1{
+    font-family:var(--rounded);font-size:42px;font-weight:700;
+    background:linear-gradient(120deg,var(--blush),var(--lav));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    line-height:1.1;
+  }
+  header .sub{color:var(--ink-soft);font-size:17px;margin-top:10px;font-weight:500;}
+  header .for{color:var(--blush-deep);font-weight:700;margin-top:6px;font-family:var(--rounded);font-size:18px;}
+
+  .release{
+    background:var(--card);border-radius:24px;padding:26px 26px 22px;
+    margin-bottom:22px;
+    box-shadow:0 16px 30px -22px rgba(167,143,214,.55);
+  }
+  .release.latest{
+    border:2px solid var(--blush);
+    box-shadow:0 18px 34px -20px rgba(233,138,166,.55);
+  }
+  .release h2{
+    font-family:var(--rounded);font-size:24px;font-weight:700;display:flex;align-items:center;gap:10px;
+  }
+  .badge{
+    font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.04em;
+    background:linear-gradient(120deg,var(--blush),var(--blush-deep));
+    color:#fff;padding:4px 10px;border-radius:999px;text-transform:uppercase;
+  }
+  .release time{display:block;color:var(--ink-soft);font-size:13px;font-weight:600;margin-top:4px;}
+  .release .lead{margin-top:14px;font-size:15px;}
+
+  h3{
+    font-family:var(--rounded);font-size:15px;font-weight:700;
+    margin-top:18px;margin-bottom:8px;color:var(--ink);
+    display:flex;align-items:center;gap:8px;
+  }
+  h3 .dot{display:inline-block;width:10px;height:10px;border-radius:50%;}
+  .new   h3 .dot{background:var(--mint);}
+  .fix   h3 .dot{background:var(--blush);}
+  .tweak h3 .dot{background:var(--peach);}
+
+  ul{list-style:none;padding-left:6px;}
+  li{
+    position:relative;padding-left:22px;margin:7px 0;font-size:14.5px;
+  }
+  li::before{
+    content:"";position:absolute;left:6px;top:.72em;width:6px;height:6px;border-radius:50%;
+    background:var(--lav);
+  }
+  li b{color:var(--ink);font-weight:700;}
+
+  .howto{
+    margin-top:8px;background:rgba(255,255,255,.6);border:1.5px solid rgba(233,138,166,.3);
+    border-radius:18px;padding:16px 18px;
+  }
+  .howto h3{margin-top:0;}
+  .howto p{font-size:14px;color:var(--ink-soft);}
+
+  footer{
+    text-align:center;margin-top:36px;color:var(--ink-soft);font-size:13px;
+    font-weight:500;
+  }
+  footer .heart{color:var(--blush-deep);}
+</style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>What's new in GlowTracker</h1>
+    <p class="sub">A little love letter for every update.</p>
+    <p class="for">For Aja, with love.</p>
+  </header>
+
+  <!-- LATEST RELEASE -->
+  <article class="release latest">
+    <h2>Round 1 of your feedback <span class="badge">Latest</span></h2>
+    <time>Pushed this week</time>
+    <p class="lead">All the things you flagged, fixed. Plus a few extras I think you'll like.</p>
+
+    <h3 class="fix"><span class="dot"></span>Fixes</h3>
+    <ul>
+      <li><b>Tapping to check things off works instantly now.</b> The tap was always saving, but the screen wasn't refreshing in time. That's sorted.</li>
+      <li><b>Adding routines and treatments shows up right away</b> instead of feeling laggy.</li>
+      <li><b>The calendar uses a different color for each treatment</b> so you can tell them apart at a glance. The legend now lists each one by name.</li>
+      <li><b>Recent logs in the Symptom Log are tappable.</b> Tap any past day to review or edit what you wrote.</li>
+    </ul>
+
+    <h3 class="new"><span class="dot"></span>New</h3>
+    <ul>
+      <li><b>Long-press the gear icon (top right of Today)</b> to get a quick little menu: light/dark toggle, help page, and a way to walk through the tutorial again.</li>
+      <li><b>A Help page</b> with a quick tour of every tab.</li>
+      <li><b>One-tap "restart the tutorial"</b> in case you ever want to see the onboarding again.</li>
+    </ul>
+
+    <h3 class="tweak"><span class="dot"></span>Little tweaks</h3>
+    <ul>
+      <li>The skin care ring (the third one) now tells you what fills it &mdash; logging how your skin feels + changing your pillowcase.</li>
+    </ul>
+
+    <div class="howto">
+      <h3 class="tweak"><span class="dot"></span>To get this update</h3>
+      <p>Open the TestFlight app on your phone. There'll be an Update button next to GlowTracker. Tap it and you're good.</p>
+    </div>
+  </article>
+
+  <!-- PREVIOUS RELEASE -->
+  <article class="release">
+    <h2>The very first build</h2>
+    <time>Your first invite</time>
+    <p class="lead">This is what you started with.</p>
+
+    <h3 class="new"><span class="dot"></span>What's in there</h3>
+    <ul>
+      <li><b>Today</b> &mdash; your daily morning and evening checklists, with little built-in timers between steps.</li>
+      <li><b>Treatments</b> &mdash; add your own actives (retinoids, acids, vitamin C, whatever), pick the days you use them, optionally with a gradual ramp-up.</li>
+      <li><b>Closing rings</b> like Apple Fitness &mdash; morning, evening, and a third for everyday care. Try to close all three.</li>
+      <li><b>Calendar</b> showing which nights are treatment nights at a glance.</li>
+      <li><b>Progress</b> with streaks, a 5-week heatmap, milestones, and a skin-condition trend graph.</li>
+      <li><b>Journal</b> for weekly progress photos &mdash; first vs. latest comparison built in.</li>
+      <li><b>Symptom Log</b> for redness, peeling, dryness, irritation, and breakouts.</li>
+      <li><b>Social</b> &mdash; profiles, messaging, and borrowing routine steps from friends.</li>
+      <li>Six pastel themes, light and dark mode, and a cozy dark mode that isn't harsh.</li>
+      <li>Onboarding with a hands-on tutorial so you know how it all works.</li>
+    </ul>
+  </article>
+
+  <footer>
+    Made with <span class="heart">&#9825;</span> for you.
+    <br>Keep the feedback coming &mdash; every note shapes the next build.
+  </footer>
+
+</main>
+</body>
+</html>
